@@ -35,6 +35,30 @@ html {
   font-family: "SatoshiMediumItalic";
   src: url("../public/fonts/Satoshi-MediumItalic.otf") format("truetype");
 }
+@font-face {
+  font-family: "SatoshiBlackItalic";
+  src: url("../public/fonts/Satoshi-BlackItalic.otf") format("truetype");
+}
+@font-face {
+  font-family: "SatoshiLightItalic";
+  src: url("../public/fonts/Satoshi-LightItalic.otf") format("truetype");
+}
+@font-face {
+  font-family: "SatoshiRegular";
+  src: url("../public/fonts/Satoshi-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "SatoshiBold";
+  src: url("../public/fonts/Satoshi-Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "SatoshiBlack";
+  src: url("../public/fonts/Satoshi-Black.otf") format("truetype");
+}
+@font-face {
+  font-family: "SatoshiLight";
+  src: url("../public/fonts/Satoshi-Light.otf") format("truetype");
+}
 
 .button1 {
   font-family: "SatoshiMedium";
@@ -74,7 +98,7 @@ html {
 
 .header {
   position: fixed;
-
+  z-index: 1;
   top: 10vh;
   right: 8vw;
 }
@@ -136,11 +160,41 @@ html {
   }
 }
 
+/* FOOTER */
+.footer {
+  width: 100vw;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px;
+  border-top: solid 1px var(--color--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer > div {
+  position: relative;
+  height: 60px;
+  width: 120px;
+  margin: 0 20px;
+}
+.footer > div > img {
+  object-fit: contain;
+}
+.footer > p {
+  font-family: "SatoshiBlack";
+  font-size: 16px;
+  margin: 0 20px;
+  margin-left: 10px;
+}
 /* HERO */
 
 .hero {
   height: 100vh;
+  max-height: 1024px;
   width: 100vw;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: flex-end;
 }
@@ -212,4 +266,216 @@ html {
 }
 .hero_location > img {
   object-fit: contain;
+}
+
+/* Home Intro */
+
+.home_intro {
+  margin: 0 auto;
+
+  max-height: 1024px;
+  width: 100vw;
+  max-width: 1440px;
+  margin-bottom: 100px;
+
+  /* background-image: url("/img/pics/mosaique-home.png");
+  background-size: cover;
+  background-position: center; */
+}
+.home_intro > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.home_intro > div:nth-child(1) > p {
+  font-family: "SatoshiLight";
+  font-size: 26px;
+  background-color: var(--color--pink);
+  /* padding: 40px 40px; */
+  margin-top: 60px;
+  margin-left: 5vw;
+  width: 54%;
+  color: var(--color--white);
+  /* box-shadow: -2px 2px 0px 0px white; */
+  position: relative;
+}
+/* .home_intro > div > p::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 0;
+  right: -17%;
+
+  background-image: url("/img/dancers/1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+.home_intro > div:nth-child(1) > p > span {
+  font-family: "SatoshiBold";
+}
+.home_intro_images {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 50px 0 0px 4vw;
+}
+
+.home_intro_images > div {
+  position: relative;
+  width: 25%;
+  height: 230px;
+  margin: 10px;
+  border: solid var(--color--white) 1px;
+}
+
+.home_intro_images > div > img {
+  object-fit: cover;
+}
+
+/* Home Lineup */
+
+.home_lineup {
+  margin: 0 auto;
+  /* height: 100vh; */
+  max-height: 1024px;
+  width: 100vw;
+  max-width: 1440px;
+  padding-bottom: 100px;
+  position: relative;
+}
+/* .home_lineup::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 10%;
+  left: -10%;
+
+  background-image: url("/img/dancers/1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
+.home_lineup > div {
+  margin: 0 auto;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+.home_lineup > div > h2 {
+  font-family: "SatoshiBold";
+  font-size: 70px;
+
+  color: var(--color--white);
+  text-align: center;
+}
+.home_lineup > div > h1 {
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+  font-size: 70px;
+
+  color: var(--color--white);
+  text-align: center;
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.home_lineup > div > ul {
+  list-style: none;
+  text-align: center;
+  font-family: "SatoshiLight";
+  text-transform: uppercase;
+  font-size: 24px;
+  color: var(--color-green);
+  margin: 70px 0 80px 0;
+}
+.home_lineup > div > ul > li {
+  margin: 15px 0;
+}
+
+/* Home quotes */
+
+.home_quotes {
+  margin: 0 auto;
+
+  width: 100vw;
+  max-width: 1440px;
+  padding-bottom: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.home_quotes > div {
+  width: 48vw;
+  display: flex;
+  flex-direction: column;
+  color: var(--color--white);
+  align-items: flex-start;
+  /* padding-left: 20vw; */
+  padding-top: 80px;
+}
+.home_quotes > div > p {
+  width: 90%;
+  font-size: 26px;
+  text-align: start;
+  font-family: "SatoshiMediumItalic";
+  margin-bottom: 10px;
+}
+.home_quotes > div > h3 {
+  width: 100%;
+  font-size: 22px;
+  text-align: end;
+  font-family: "SatoshiLight";
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+/* INFORMATION */
+
+.information {
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 1440px;
+  padding: 60px 30vw 100px 10vw;
+}
+
+.information > h1 {
+  color: var(--color--white);
+  font-size: 64px;
+  font-family: "SatoshiBold";
+  margin-bottom: 50px;
+}
+.information > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 600px;
+  margin-top: -30px;
+}
+.information > div > button {
+  width: fit-content;
+}
+.information > div > p {
+  color: var(--color--white);
+  font-family: "SatoshiLight";
+  margin-top: 30px;
+  max-width: 30vw;
+  font-size: 18px;
+  margin-right: 70px;
+}
+
+.information > div > p > span {
+  font-family: "SatoshiBlackItalic";
+  color: var(--color--white);
+  line-height: 40px;
 }
