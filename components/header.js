@@ -36,7 +36,11 @@ export default function Header() {
           <button onClick={() => setMenu(false)}>X</button>
         )}
         <a href="/about">?</a>
-        <div>
+        <div
+          onClick={() =>
+            router.push("https://www.instagram.com/dancingfamilyrecords/")
+          }
+        >
           <Image src="/img/icons/insta-white.png" height={30} width={30} />
         </div>
       </div>

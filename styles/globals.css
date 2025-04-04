@@ -1028,4 +1028,164 @@ html {
 
     margin-bottom: 40px;
   }
+  .lineup {
+    margin: 0 0;
+    min-height: none;
+
+    width: 90vw;
+
+    padding: 30px 30px 30px 30px;
+    position: relative;
+  }
+  .lineup::after {
+    width: 44vw;
+    height: 1px;
+    background-image: none;
+    background-color: var(--color--white);
+    top: 62px;
+    right: 0;
+  }
+  .lineup > h1 {
+    font-size: 42px;
+    font-family: "SatoshiBold";
+    margin-bottom: 20px;
+  }
+  .lineup > div > h2 {
+    font-size: 20px;
+    font-family: "SatoshiMediumItalic";
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+  .lineup > div > ul {
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+    margin-right: 0px;
+  }
+  .information {
+    margin: 0 0;
+    min-height: none;
+
+    width: 90vw;
+
+    padding: 30px 30px 30px 30px;
+  }
+  .information::after {
+    position: absolute;
+    content: "";
+    width: 26vw;
+    height: 1px;
+    background-image: none;
+    background-color: var(--color--white);
+    top: 62px;
+    right: 0;
+  }
+  .information > h1 {
+    font-size: 42px;
+    font-family: "SatoshiBold";
+    margin-bottom: 40px;
+  }
+  .information > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: none;
+    margin-top: -30px;
+  }
+  .information > div > p {
+    margin-top: 20px;
+    max-width: 89vw;
+    font-size: 14px;
+    margin-right: 0px;
+  }
+  .information > div > p > span {
+    line-height: 30px;
+  }
+  .about {
+    margin: 0 0;
+    min-height: none;
+
+    width: 90vw;
+
+    padding: 30px 30px 30px 30px;
+  }
+  .about::after {
+    position: absolute;
+    content: "";
+    width: 40vw;
+    height: 1px;
+    background-image: none;
+    background-color: var(--color--white);
+    top: 62px;
+    right: 0;
+  }
+  .about > h1 {
+    font-size: 42px;
+    font-family: "SatoshiBold";
+    margin-bottom: 40px;
+  }
+  .about > div > div {
+    position: relative;
+    height: 150px;
+    width: 70vw;
+    margin-bottom: 50px;
+    border: solid var(--color--white) 1px;
+  }
+  .about > div > p {
+    margin-bottom: 20px;
+    width: 75vw;
+    font-size: 14px;
+    margin-right: 70px;
+  }
+  .involved {
+    margin: 0 0;
+    min-height: none;
+
+    width: 90vw;
+
+    padding: 30px 30px 30px 30px;
+  }
+  .involved::after {
+    position: absolute;
+    content: "";
+    width: 22vw;
+    height: 1px;
+    background-image: none;
+    background-color: var(--color--white);
+    top: 62px;
+    right: 0;
+  }
+  .involved > h1 {
+    font-size: 42px;
+    font-family: "SatoshiBold";
+    margin-bottom: 40px;
+  }
+  .involved > p {
+    margin-bottom: 30px;
+    width: 75vw;
+    font-size: 18px;
+    margin-right: 0px;
+  }
+  .button1 {
+    font-size: 16px;
+
+    padding: 8px 18px;
+    cursor: pointer;
+
+    text-wrap: nowrap;
+  }
+  .involved > div > button {
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+  .involved_img {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+
+    display: flex;
+  }
 }
