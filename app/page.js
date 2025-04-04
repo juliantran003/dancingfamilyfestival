@@ -97,7 +97,7 @@ export default function Home() {
           <h2>lineup</h2>
           <ul>
             {lineup.map((artist) => {
-              return <li key={artist.artist}>{artist.artist}</li>;
+              return <li key={artist}>{artist}</li>;
             })}
           </ul>
           <button className="button1">learn more</button>

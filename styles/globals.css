@@ -163,27 +163,35 @@ html {
 /* FOOTER */
 .footer {
   width: 100vw;
-  max-width: 1440px;
+
   margin: 0 auto;
-  padding: 80px;
-  border-top: solid 1px var(--color--white);
+  padding: 60px 80px;
+  /* border-top: solid 1px var(--color--white); */
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-black);
 }
 
 .footer > div {
   position: relative;
-  height: 60px;
+  height: 120px;
   width: 120px;
   margin: 0 20px;
 }
 .footer > div > img {
   object-fit: contain;
 }
+.footer > div:nth-child(4) > img {
+  object-fit: contain;
+
+  filter: invert(100%) sepia(0%) saturate(21%) hue-rotate(20deg)
+    brightness(106%) contrast(108%);
+}
 .footer > p {
-  font-family: "SatoshiBlack";
-  font-size: 16px;
+  color: var(--color--white);
+  font-family: "SatoshiRegular";
+  font-size: 18px;
   margin: 0 20px;
   margin-left: 10px;
 }
@@ -339,7 +347,7 @@ html {
 .home_lineup {
   margin: 0 auto;
   /* height: 100vh; */
-  max-height: 1024px;
+  /* max-height: 1024px; */
   width: 100vw;
   max-width: 1440px;
   padding-bottom: 100px;
@@ -390,6 +398,10 @@ html {
   }
 }
 .home_lineup > div > ul {
+  max-width: 65vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
   text-align: center;
   font-family: "SatoshiLight";
@@ -399,7 +411,11 @@ html {
   margin: 70px 0 80px 0;
 }
 .home_lineup > div > ul > li {
-  margin: 15px 0;
+  margin: 5px;
+}
+.home_lineup > div > ul > li:nth-child(odd) {
+  color: var(--color-black);
+  font-family: "SatoshiRegular";
 }
 
 /* Home quotes */
@@ -414,6 +430,30 @@ html {
   display: flex;
   justify-content: center;
 }
+/* .home_quotes::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  bottom: 12%;
+  right: 14%;
+
+  background-image: url("/img/dancers/3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+/* .home_quotes::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0%;
+  left: 12%;
+
+  background-image: url("/img/dancers/1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
 .home_quotes > div {
   width: 48vw;
   display: flex;
@@ -464,6 +504,7 @@ html {
 }
 .information > div > button {
   width: fit-content;
+  margin-top: 30px;
 }
 .information > div > p {
   color: var(--color--white);
@@ -478,4 +519,167 @@ html {
   font-family: "SatoshiBlackItalic";
   color: var(--color--white);
   line-height: 40px;
+}
+
+/* ABOUT */
+
+.about {
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 1440px;
+  padding: 60px 30vw 100px 10vw;
+}
+.about > h1 {
+  color: var(--color--white);
+  font-size: 64px;
+  font-family: "SatoshiBold";
+  margin-bottom: 50px;
+}
+
+.about > div > p {
+  color: var(--color--white);
+  font-family: "SatoshiLight";
+  margin-bottom: 30px;
+  width: 65vw;
+  font-size: 18px;
+  margin-right: 70px;
+}
+
+.about > div > div {
+  position: relative;
+  height: 450px;
+  width: 60vw;
+  margin-bottom: 50px;
+  border: solid var(--color--white) 1px;
+}
+.about > div > div > img {
+  object-fit: cover;
+  object-position: top;
+}
+
+.about > div {
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* INVOLVED */
+
+.involved {
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 1440px;
+  padding: 60px 30vw 100px 10vw;
+}
+.involved > h1 {
+  color: var(--color--white);
+  font-size: 64px;
+  font-family: "SatoshiBold";
+  margin-bottom: 120px;
+}
+
+.involved > p {
+  color: var(--color--white);
+  font-family: "SatoshiLight";
+  margin-bottom: 30px;
+  width: 65vw;
+  font-size: 22px;
+  margin-right: 70px;
+}
+.involved > p > span {
+  font-family: "SatoshiBold";
+}
+.involved > div {
+  display: flex;
+}
+.involved > div > button {
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.involved_img {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+
+  display: flex;
+}
+
+.involved_img > img {
+  object-fit: contain;
+}
+
+/* LINEUP */
+
+.lineup {
+  margin: 0 auto;
+  min-height: 100vh;
+  /* max-height: 1080px; */
+  width: 100vw;
+  max-width: 1440px;
+  padding: 60px 30vw 100px 10vw;
+  position: relative;
+}
+.lineup::after {
+  content: "";
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  top: 180px;
+  right: -15%;
+
+  background-image: url("/img/dancers/2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.lineup > h1 {
+  color: var(--color--white);
+  font-size: 64px;
+  font-family: "SatoshiBold";
+  margin-bottom: 50px;
+  position: relative;
+  /* margin-left: 55px; */
+}
+/* .lineup > h1::after {
+  content: "✹";
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 64px;
+  top: 28px;
+  left: -55px;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+} */
+.lineup > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* max-height: 650px; */
+  flex-wrap: wrap;
+}
+.lineup > div > h2 {
+  color: var(--color-green);
+  font-size: 32px;
+  font-family: "SatoshiMediumItalic";
+  margin-bottom: 20px;
+  margin-right: 60px;
+}
+.lineup > div > ul {
+  color: var(--color-green);
+  font-size: 22px;
+  font-family: "SatoshiLight";
+  margin-bottom: 30px;
+  list-style: none;
+  margin-right: 60px;
 }

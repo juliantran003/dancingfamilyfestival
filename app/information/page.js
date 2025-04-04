@@ -58,9 +58,9 @@ export default function Information() {
         </p>
         {/* <p>
           <span>More questions ?</span>
-        </p>
+        </p> */}
 
-        <button className="button1">Contact</button> */}
+        <button className="button1">More Questions?</button>
       </div>
     </main>
   );

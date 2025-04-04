@@ -5,11 +5,11 @@ export default function Footer() {
     <footer className="footer">
       <p>A</p>
       <div>
-        <Image src="/img/dfr-logo/dfr.png" fill />
+        <Image src="/img/dfr-logo/dfr-white.jpg" fill />
       </div>
-      <p>event sponsored by</p>
+      <p>event in partnership with</p>
       <div>
-        <Image src="/img/sponsors/tcs.png" fill />
+        <Image src="/img/sponsors/tcs.svg" fill />
       </div>
     </footer>
   );
