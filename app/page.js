@@ -13,15 +13,20 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [onepink, twopink, threepink];
   const handleClick = () => {};
-  document.onscroll = function () {
-    if (window.innerHeight + window.scrollY > document.body.clientHeight) {
-      document.getElementById("arrow").style.display = "none";
-    } else {
-      document.getElementById("arrow").style.display = "flex";
-    }
-  };
+  const [height, setHeight] = useState();
 
   useEffect(() => {
+    document.onscroll = function () {
+      if (window.innerHeight + window.scrollY > document.body.clientHeight) {
+        document.getElementById("arrow").style.display = "none";
+      } else {
+        document.getElementById("arrow").style.display = "flex";
+      }
+    };
+  }, [handleClick]);
+  useEffect(() => {
+    const pageHeight = window.innerHeight;
+    setHeight(pageHeight);
     const intervalId = setInterval(() => {
       // if (currentIndex > 3) {
       //   setCurrentIndex(currentIndex + 1);
@@ -37,14 +42,13 @@ export default function Home() {
 
     return () => clearInterval(intervalId);
   }, [handleClick]);
-  const pageHeight = window.innerHeight;
 
   return (
     <main>
       <div className="arrow_container" id="arrow">
         <div
           className="arrow"
-          onClick={() => window.scrollBy(0, pageHeight, { behavior: "smooth" })}
+          onClick={() => window.scrollBy(0, height, { behavior: "smooth" })}
         >
           <Image fill src="/img/icons/arrow-down.png" />
         </div>
