@@ -9,14 +9,15 @@ export default function Information() {
           </span>
           Entrance to the Festival Thursday 3rd of July 12pm - Sunday 5th 12pm 
           Access to public camping with free showers  An array of Talks,
-          workshops and other daytime activities
+          workshops and other daytime activities.
         </p>
         <p>
           <span>
             Are local resident tickets available?<br></br>
           </span>
           Local community tickets will be available from March 2025 These
-          tickets are available for anyone living in Monmouthshire. 
+          tickets are available for anyone living in Monmouthshire. Email us at
+          info@dancingfam.com for more information.
         </p>
         <p>
           <span>
@@ -56,11 +57,17 @@ export default function Information() {
           Yes it is! The more the merrier :) We will be making volunteer spots
           available in the Spring.
         </p>
+        <p>
+          <span>
+            What are my accommodation options? <br></br>
+          </span>
+          You can bring your own tent or rent out a Bell Tent for the week-end.
+        </p>
         {/* <p>
           <span>More questions ?</span>
         </p> */}
 
-        <button className="button1">More Questions?</button>
+        {/* <button className="button1">More Questions?</button> */}
       </div>
     </main>
   );
