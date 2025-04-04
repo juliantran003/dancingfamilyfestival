@@ -16,8 +16,11 @@ export default function Information() {
             Are local resident tickets available?<br></br>
           </span>
           Local community tickets will be available from March 2025 These
-          tickets are available for anyone living in Monmouthshire. Email us at
-          info@dancingfam.com for more information.
+          tickets are available for anyone living in Monmouthshire. Email us at{" "}
+          <a className="information_mail" href="mailto:info@dancingfam.com">
+            info@dancingfam.com
+          </a>{" "}
+          for more information.
         </p>
         <p>
           <span>

@@ -15,7 +15,14 @@ export default function Involved() {
       </p>
       <div>
         <button className="button1">Volunteer</button>
-        <button className="button1">Open Call</button>
+        <button className="button1">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScAiZZqd0rwzYPIZrh07_G85k1lYpLGBne6H1USUGIPMYAmyw/viewform?usp=sf_link"
+            target="_blank"
+          >
+            Open Call
+          </a>
+        </button>
       </div>
       <div className="involved_img">
         <Image fill src="/img/dancers/line.png" />

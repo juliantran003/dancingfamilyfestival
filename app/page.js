@@ -6,8 +6,10 @@ import { useState, useEffect } from "react";
 import onepink from "../public/img/posters/1-pink.png";
 import twopink from "../public/img/posters/2-pink.png";
 import threepink from "../public/img/posters/3-pink.png";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [onepink, twopink, threepink];
   const handleClick = () => {};
@@ -100,7 +102,9 @@ export default function Home() {
               return <li key={artist}>{artist}</li>;
             })}
           </ul>
-          <button className="button1">learn more</button>
+          <button className="button1" onClick={() => router.push("/lineup")}>
+            Dates
+          </button>
         </div>
       </section>
       <section className="home_quotes">
