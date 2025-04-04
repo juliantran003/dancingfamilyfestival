@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, useEffect } from "next/navigation";
 import { useState } from "react";
 
 export default function Header() {
   const router = useRouter();
   const [menu, setMenu] = useState(false);
+
   return (
     <header className="header">
       <menu className="header_menu">
@@ -36,11 +37,11 @@ export default function Header() {
           <button onClick={() => setMenu(false)}>X</button>
         )}
         <a href="/about">?</a>
-        <div
-          onClick={() =>
-            router.push("https://www.instagram.com/dancingfamilyrecords/")
-          }
-        >
+        <div>
+          <a
+            href="https://www.instagram.com/dancingfamilyrecords/"
+            target="_blank"
+          ></a>
           <Image src="/img/icons/insta-white.png" height={30} width={30} />
         </div>
       </div>

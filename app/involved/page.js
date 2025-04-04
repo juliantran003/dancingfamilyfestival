@@ -14,7 +14,15 @@ export default function Involved() {
         installation, a game, a workshop.
       </p>
       <div>
-        <button className="button1">Volunteer</button>
+        <button className="button1">
+          {" "}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfiQHoeu1reM7PH0xSK9CwivuYdtOtptnPRo62F0nXWl-hz-g/viewform"
+            target="_blank"
+          >
+            Volunteer
+          </a>
+        </button>
         <button className="button1">
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLScAiZZqd0rwzYPIZrh07_G85k1lYpLGBne6H1USUGIPMYAmyw/viewform?usp=sf_link"

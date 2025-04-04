@@ -67,7 +67,12 @@ export default function Home() {
               </div>
               <h2>THREE POOLS FARM</h2>
             </div>
-            <button className="button1">buy tickets</button>
+            <button className="button1">
+              {" "}
+              <a href="https://ra.co/events/2038340" target="_blank">
+                buy tickets
+              </a>
+            </button>
           </div>
           <div className="hero_sponsors">
             <div>
