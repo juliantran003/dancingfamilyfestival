@@ -1045,6 +1045,18 @@ html {
     top: 62px;
     right: 0;
   }
+  .lineup::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: 80px;
+    left: 52vw;
+
+    background-image: url("/img/dancers/2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
   .lineup > h1 {
     font-size: 42px;
     font-family: "SatoshiBold";
