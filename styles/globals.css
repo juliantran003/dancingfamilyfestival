@@ -59,7 +59,31 @@ html {
   font-family: "SatoshiLight";
   src: url("../public/fonts/Satoshi-Light.otf") format("truetype");
 }
+.arrow_container {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  bottom: 15px;
+  font-size: 26px;
+  animation: float 0.8s ease-in-out infinite;
+  z-index: 2;
+}
+.arrow {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+@keyframes float {
+  0% {
+    bottom: 15px;
+  }
 
+  50% {
+    bottom: 20px;
+  }
+}
 .button1 {
   font-family: "SatoshiMedium";
   text-transform: uppercase;
@@ -107,19 +131,19 @@ html {
   right: 8vw;
 }
 
-.header > menu {
+.header_menu {
   list-style: none;
   text-align: end;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.header > menu > li {
+.header_menu > li {
   overflow: hidden;
   animation: slide 0.5s ease-in-out 0s 1;
 }
 
-.header > menu > li > a {
+.header_menu > li > a {
   font-family: "SatoshiMedium";
   color: var(--color--white);
   text-decoration: none;
@@ -128,7 +152,7 @@ html {
   text-wrap: nowrap;
   transition: 0.2s;
 }
-.header > menu > li > a:hover {
+.header_menu > li > a:hover {
   padding-right: 10px;
   transition: 0.2s;
 }
@@ -164,10 +188,21 @@ html {
   }
 }
 
+.mobileHeader {
+  display: none;
+}
+
+.mobileHeader_menu {
+  display: none;
+}
+.mobileHeader_menu_hide {
+  display: none;
+}
+
 /* FOOTER */
 .footer {
   width: 100vw;
-
+  z-index: 3;
   margin: 0 auto;
   padding: 60px 80px;
   /* border-top: solid 1px var(--color--white); */
@@ -699,4 +734,298 @@ html {
   margin-bottom: 30px;
   list-style: none;
   margin-right: 60px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media only screen and (max-width: 600px) {
+  .header_menu {
+    display: none;
+  }
+  .header::after {
+    display: none;
+  }
+  .header {
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+  .mobileHeader {
+    top: 0;
+    right: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 100vh;
+    width: 10vw;
+    background-color: var(--color--pink);
+    border-left: solid var(--color--white) 1px;
+    z-index: 2;
+  }
+
+  .mobileHeader > button {
+    font-family: "SatoshiRegular";
+    font-size: 24px;
+    line-height: 26px;
+    background: none;
+    color: var(--color--white);
+
+    border: none;
+    width: 100%;
+    padding: 15px 0px;
+    border-bottom: solid white 1px;
+  }
+  .mobileHeader > a {
+    font-family: "SatoshiBold";
+    font-size: 24px;
+    color: var(--color--white);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-bottom: solid white 1px;
+
+    padding-bottom: 5px;
+    text-decoration: none;
+  }
+
+  .mobileHeader > div {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    margin: 7px 0px 4px 0;
+  }
+  .mobileHeader > div > img {
+    object-fit: contain;
+  }
+  .mobileHeader_menu {
+    z-index: 1;
+    list-style: none;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-right: 80px;
+    background-color: var(--color--pink);
+    animation: slideIn 0.2s ease-in-out;
+  }
+  .mobileHeader_menu_hide {
+    z-index: 1;
+    list-style: none;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    padding-right: 80px;
+    background-color: var(--color--pink);
+    animation: slideOut 0.2s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    0% {
+      left: 100%;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+  @keyframes slideOut {
+    0% {
+      left: 0;
+    }
+
+    100% {
+      left: 100%;
+    }
+  }
+
+  .mobileHeader_menu > li > a {
+    font-family: "SatoshiMedium";
+    color: var(--color--white);
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    transition: 0.2s;
+  }
+  .footer {
+    width: 90vw;
+    margin: 0 0;
+    padding: 40px 20px;
+  }
+  .footer > div {
+    position: relative;
+    height: 60px;
+    width: 120px;
+    margin: 0 20px;
+  }
+  .footer > p {
+    display: none;
+  }
+  .hero {
+    max-height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero_image {
+    position: relative;
+    height: 66vh;
+    width: 90vw;
+
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: solid white 1px;
+  }
+  .hero_image > img {
+    padding: 10px;
+  }
+  .hero_info {
+    width: 90vw;
+    padding-bottom: 0;
+    z-index: 1;
+  }
+  .hero_sponsors {
+    display: none;
+  }
+
+  .hero_text {
+    color: var(--color--white);
+  }
+  .hero_text h1 {
+    font-family: "SatoshiMediumItalic";
+    font-size: 28px;
+    padding-left: 30px;
+    padding-top: 20px;
+  }
+
+  .hero_text h2 {
+    font-family: "SatoshiMedium";
+    width: fit-content;
+
+    font-size: 16px;
+  }
+  .hero_text button {
+    margin-bottom: 10vh;
+    margin-left: 30px;
+  }
+
+  .hero_text > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .hero_location {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-left: 30px;
+  }
+  .hero_location > img {
+    object-fit: contain;
+  }
+  .home_intro {
+    margin: 0 0;
+    max-height: none;
+    width: 90vw;
+
+    margin-bottom: 0px;
+  }
+  .home_intro > div:nth-child(1) > p {
+    font-family: "SatoshiLight";
+    font-size: 16px;
+
+    margin-top: 0px;
+    margin-left: 30px;
+    width: 80%;
+  }
+  .home_intro_images {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 40px 0 0px 30px;
+  }
+  .home_intro_images > div {
+    width: 90%;
+    height: 180px;
+    margin: 0;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    border: solid var(--color--white) 1px;
+  }
+  .home_intro_images > div:nth-child(odd) {
+    display: none;
+  }
+  .home_lineup {
+    margin: 0 0;
+
+    width: 90vw;
+
+    padding-bottom: 100px;
+    position: relative;
+  }
+  .home_lineup > div {
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  .home_lineup > div > h2 {
+    font-size: 40px;
+  }
+  .home_lineup > div > h1 {
+    font-size: 50px;
+  }
+  .home_lineup > div > ul {
+    max-width: 80%;
+
+    font-size: 18px;
+    color: var(--color-green);
+    margin: 30px 0 40px 0;
+  }
+  .home_lineup > div > ul > li {
+    margin: 2px;
+  }
+  .home_quotes {
+    margin: 0 0;
+
+    width: 90vw;
+
+    padding-bottom: 50px;
+  }
+  .home_quotes > div {
+    width: 70%;
+
+    padding-top: 0px;
+  }
+  .home_quotes > div > p {
+    width: 100%;
+    font-size: 18px;
+    text-align: start;
+    font-family: "SatoshiMediumItalic";
+    margin-bottom: 10px;
+  }
+  .home_quotes > div > h3 {
+    width: 100%;
+    font-size: 14px;
+
+    margin-bottom: 40px;
+  }
 }
