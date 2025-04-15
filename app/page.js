@@ -84,6 +84,9 @@ export default function Home() {
             <div>
               <Image src="/img/dfr-logo/dfr.png" fill />
             </div>
+            <div>
+              <Image src="/img/sponsors/yin.png" fill />
+            </div>
           </div>
         </div>
       </section>

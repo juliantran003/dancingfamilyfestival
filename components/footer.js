@@ -11,6 +11,12 @@ export default function Footer() {
       <div>
         <Image src="/img/sponsors/tcs.svg" fill />
       </div>
+      <div>
+        <Image src="/img/sponsors/yin.png" fill />
+      </div>
+      <div>
+        <Image src="/img/sponsors/threepools.png" fill />
+      </div>
     </footer>
   );
 }
