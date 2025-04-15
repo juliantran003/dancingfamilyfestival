@@ -144,8 +144,12 @@ export default function Home() {
             see what they do here.’
           </p>
           <h3>- Our Dad</h3>
-          <p>‘Wales finally has a good dance festival.’</p>
-          <h3>- Our cousin Vinnie</h3>
+          <p>
+            ‘This three-day festival gives new meaning to family-friendly: all
+            DJs will go back-to-back with family or chosen family. This,
+            naturally, should foster a cosy and special atmosphere.’
+          </p>
+          <h3>- Resident Advisor</h3>
         </div>
       </section>
     </main>
