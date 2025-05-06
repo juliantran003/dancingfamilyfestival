@@ -4,4 +4,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: https://www.dancingfam.com/static/sitemap.xml
+Sitemap: https://www.dancingfam.com/sitemap.xml
